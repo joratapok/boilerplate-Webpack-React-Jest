@@ -7,30 +7,34 @@ import type {Config} from 'jest';
 
 const config: Config = {
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
 
   // A set of global variables that need to be available in all test environments
   globals: {
-    "__DEV__": true,
+    __DEV__: true,
   },
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
     // "^@/(.*)": "<rootDir>/src/",
-    "^@/pages(.*)": "<rootDir>/src/pages$1",
-    "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/mocks/fileMock.js",
-    "\\.(css|less)$": "<rootDir>/config/mocks/fileMock.js",
-    "\\.(svg)$": "<rootDir>/config/mocks/svgMock.js"
+    '^@/pages(.*)': '<rootDir>/src/pages$1',
+    '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/config/mocks/fileMock.js',
+    '\\.(css|less)$': '<rootDir>/config/mocks/fileMock.js',
+    '\\.(svg)$': '<rootDir>/config/mocks/svgMock.js',
   },
 
   // A preset that is used as a base for Jest's configuration
   preset: 'ts-jest',
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+
+  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
+  modulePathIgnorePatterns: ['<rootDir>/dist/'],
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -108,9 +112,6 @@ const config: Config = {
   //   "json",
   //   "node"
   // ],
-
-  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
 
   // Activates notifications for test results
   // notify: false,

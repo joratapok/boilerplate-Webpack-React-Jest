@@ -38,6 +38,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  ignorePatterns: ['node_modules/',  'dist/',  'coverage/'],
   plugins: ['react', '@typescript-eslint', 'import', 'jsx-a11y', 'react-hooks', 'prettier', 'jest', 'boundaries'],
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',
