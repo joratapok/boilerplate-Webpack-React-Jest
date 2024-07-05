@@ -5,7 +5,7 @@ import {Text} from '@/shared/ui';
 export const AboutPage: FC = () => {
   return (
     <h1>
-      <Text>about page</Text>
+      <Text>About page</Text>
     </h1>
   );
 };
