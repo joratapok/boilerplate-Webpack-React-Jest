@@ -3,13 +3,21 @@ import {Link, Outlet} from 'react-router-dom';
 
 export const MainLayout: FC = () => {
   return (
-    <div>
+    <div className="flex flex-1 flex-col">
       {__DEV__ ? 'development mode' : 'production mode'}
-      <div style={{display: 'flex', gap: '20px'}}>
-        <Link to={'/'}>home page</Link>
-        <Link to={'/about'}>about page</Link>
+      <div>
+        navbar
+        <nav className="flex gap-4 bg-blue-200">
+          <Link to={'/'}>home page</Link>
+          <Link to={'/about'}>about page</Link>
+        </nav>
       </div>
-      <Outlet />
+
+      <div className="flex flex-1 flex-col items-center justify-center">
+        <Outlet />
+      </div>
+
+      <div className="flex">footer</div>
     </div>
   );
 };
