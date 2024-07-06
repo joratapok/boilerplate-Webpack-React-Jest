@@ -1,4 +1,3 @@
-// @ts-ignore
 import * as c from './homePage.module.css';
 
 export const HomePage = () => {
