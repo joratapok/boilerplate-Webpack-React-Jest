@@ -10,7 +10,7 @@ module.exports = {
   arrowParens: 'always',
   endOfLine: 'auto',
   bracketSpacing: false,
-  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+  plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
   importOrder: [
     '^react$',
     '<THIRD_PARTY_MODULES>',

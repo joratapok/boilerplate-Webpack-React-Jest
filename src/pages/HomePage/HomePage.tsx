@@ -1,7 +1,12 @@
+// @ts-ignore
+import * as c from './homePage.module.css';
+
 export const HomePage = () => {
   return (
-    <div>
-      <h1 data-testid={'homePageTestId'}>Home Page</h1>
+    <div className={c.container}>
+      <h1 className="text-3xl" data-testid={'homePageTestId'}>
+        Home Page
+      </h1>
     </div>
   );
 };
